@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Before and After Pseudo Selectors</title>
+</head>
+<style>
+    body{
+        background-color: black;
+        color: white;
+        /* margin: 0px; */
+        /* padding: 10px; */
+     
+    }
+    header::before{
+        background: url(https://source.unsplash.com/user/erondu/1600x900) no-repeat center center/cover ;
+        content: "";
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        z-index: -1;
+        opacity: 0.5;
+        
+        /* opacity: 0.5; makes the background image lighter(dim) so text can be visiable easily  */
+   
+    }
+    /* z-index: -1; bring the text or fonts or content which is hiden back side of the of the image  */
+    /* top: 0; bottom: 0; covers full page of a website (which is left during padding) */
+    
+    header{
+        display:flex;
+        flex-direction: column;
+    }
+    /* display:flex; is to assign from colum to row  */
+/* eg: here we took item first it will display in colum one afte another so using diaplay:flex; we can change into row  */
+
+    .navigation{
+        font-size: 30px;
+        display: flex;
+    }
+   
+    /* list-style: none; is used to remove . (dot) from li   */
+    li{
+        list-style: none;
+        flex-direction: column;
+        padding: 10px;
+        
+    }
+    section{
+        margin: 0px 50px;
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+        /* border:2px solid bisque; */
+        padding-left: 30px;
+        padding-right: 20px;
+        height: 400px;
+        justify-content: center;
+}
+/* justify-content: center; is used to asign every thing in center in that sectuon  */
+h1{
+    color: rgb(127, 208, 255);
+    font-family: 'Itim',cursive;
+}
+p{
+    text-align: center;
+}
+
+</style>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul class="navigation">
+            <li class="item">Home</li>
+            <li class="item">About</li>
+            <li class="item">Services</li>
+            <li class="item">Contact Us</li>
+        </ul>
+        </nav>
+    </header>
+        <section>
+            <h1>
+                Well com to my website
+            </h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit modi at, laborum facere ab quisquam nulla molestias voluptatibus eligendi, numquam maxime sit laboriosam ex vitae. Harum, asperiores voluptates. Similique, nostrum.</p>
+        </section>
+        
+</body>
+</html>
